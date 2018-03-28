@@ -15,6 +15,15 @@
 		<span class="example-text">如右图显示效果</span>
 		<img src="img/legend.png">
 	</div>
+	<h4>html部分</h4>
+    <xmp class="code">
+  <ul class="list-one">
+    <li><span class="text">首页</span></li>
+	<li><span class="text">项目</span></li>
+	<li><span class="text">新闻</span></li>
+	<li><span class="text">联系我们</span></li>
+  </ul>
+	</xmp>
 	<p>方法一：不用背景图片，用伪元素 + 过渡实现效果</p>
 	<div class="color clearfix">
 		<!-- 左侧效果 -->
@@ -47,15 +56,6 @@
     </div>
 
     <div class="code-box">
-    	<h4>html部分</h4>
-    <xmp class="code">
-  <ul class="list-one">
-    <li><span class="text">首页</span></li>
-	<li><span class="text">项目</span></li>
-	<li><span class="text">新闻</span></li>
-	<li><span class="text">联系我们</span></li>
-  </ul>
-		</xmp>
 		<h4>css部分</h4>
 		<xmp class="code">
   .list-one>li {
@@ -124,10 +124,45 @@
 	    	<p>背景图片切换的很流畅</p>
 	    	<h4>缺点</h4>
 	    	<p>
-	    		文字不会跟着放大缩小
+	    		http请求增减，页面加载时间变长
 	    	</p>
-	    	<span class="color-y">图例显示的是第三种情况</span>
 	    </div>
     </div>
+    <div class="code-box">
+		<h4>css部分</h4>
+		<xmp class="code">
+  .list-two>li {
+	width: 39px;
+	height: 30px;
+	font-size: 10px;
+	background: url('../img/bg.png') no-repeat 9.5px 5px;
+	background-size: 20px 20px;
+	margin: 30px 0;
+	position: relative;
+	right: -120px;
+	transition: all .3s;
+  }
+
+  .list-two .text {
+	left: -65px;
+	top: 3px;
+  }
+
+  .list-two>li:hover {
+    background: url('../img/hover-bg.png') no-repeat;
+    background-size: 39px 30px;
+    font-size: 20px;
+  }
+
+  .list-one>li:hover .text, .list-two>li:hover .text {
+	display: block;
+  }
+
+  .list-two>li:hover .text {
+	top: 5px;
+	width: 80px;
+	left: -90px;
+  }
+  </xmp>
 </body>
 </html>

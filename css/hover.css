@@ -79,7 +79,8 @@ img {
 .list-two>li {
 	width: 39px;
 	height: 30px;
-	background: url('/img/bg.png') no-repeat 9.5px 5px;
+	font-size: 10px;
+	background: url('../img/bg.png') no-repeat 9.5px 5px;
 	background-size: 20px 20px;
 	margin: 30px 0;
 	position: relative;
@@ -90,23 +91,21 @@ img {
 .list-two .text {
 	left: -65px;
 	top: 3px;
-	font-size: 10px;
 }
 
 .list-two>li:hover {
-    background: url('/img/hover-bg.png') no-repeat;
+    background: url('../img/hover-bg.png') no-repeat;
     background-size: 39px 30px;
-    /*transform: scale(1.5);*/
+    font-size: 20px;
 }
 
 .list-one>li:hover .text, .list-two>li:hover .text {
 	display: block;
-	/*font-size: 10px;*/
 }
 
 .list-two>li:hover .text {
-	transform: scale(1.5);
-	/*font-size: 15px;*/
+	top: 5px;
+	width: 80px;
 	left: -90px;
 }
 
